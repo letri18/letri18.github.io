@@ -1,50 +1,45 @@
 <!DOCTYPE html>
-  <html lang="vi">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>aquarium of satomi</title>
-      <style>
-        body{
-          margin:0;
-          background:#ffe5b4ac;
-          font-family:Arial, sans-serif;
-        }
-        .ho{
-          position:relative;
-          width:100%;
-          height:66.67vh;
-          background:linear-gradient(#2a8be0, #0b3d91);
-          overflow:hidden;
-          container-type:size;
-        }
-        .vat{
-          position:absolute;
-          left:0;
-          width:var(--w);
-          animation:boi linear infinite;
-        }
-        @keyframes boi{
-          0%   { transform:translateX(0) scaleX(1) rotate(0deg); }
-          44%  { transform:translateX(calc(100cqw - var(--w))) scaleX(1) rotate(0deg); }
-          50%  { transform:translateX(calc(100cqw - var(--w))) scaleX(1) rotate(90deg); }
-          56%  { transform:translateX(calc(100cqw - var(--w))) scaleX(-1) rotate(0deg); }
-          94%  { transform:translateX(0) scaleX(-1) rotate(0deg); }
-          97%  { transform:translateX(0) scaleX(-1) rotate(90deg); }
-          100% { transform:translateX(0) scaleX(1) rotate(0deg); }
-        }
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>aquarium of satomi</title>
+  <style>
+    body{
+      margin:0;
+      min-height:100vh;
+      background:#ffe5b4ac;
+      font-family:Arial, sans-serif;
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-end; 
+    }
+    .ho{
+      position:relative;
+      width:100%;
+      height:66.67vh;  
+      background:linear-gradient(#2a8be0, #0b3d91);
+      overflow:hidden;
+      container-type:size;
+    }
+    .vat{
+      position:absolute;
+      left:0;
+      width:var(--w);
+      animation:boi linear infinite;
+    }
+    @keyframes boi{
+      0%   { transform:translateX(0) rotate(0deg); }
+      44%  { transform:translateX(calc(100cqw - var(--w))) rotate(0deg); }
+      50%  { transform:translateX(calc(100cqw - var(--w))) rotate(180deg); }
+      94%  { transform:translateX(0) rotate(180deg); }
+      100% { transform:translateX(0) rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
 
-        @keyframes noi{
-          0%   { transform:translateY(0); opacity:0; }
-          10%  { opacity:.9; }
-          80%  { opacity:.7; }
-          100% { transform:translateY(calc(-100cqh - 40px)); opacity:0; }
-        }
-      </style>
-    </head>
-  <body>
-
-    <div class="ho" id="ho">
+  <div class="ho" id="ho">
     <img class="vat" src="shark.png"          alt="Cá mập"       style="--w:250px; top:6%;  animation-duration:22s;">
     <img class="vat" src="turtle.png"         alt="Rùa"          style="--w:172px; top:30%; animation-duration:26s; animation-delay:-8s;">
     <img class="vat" src="goldFishSchool.png" alt="Đàn cá vàng"  style="--w:125px; top:52%; animation-duration:16s; animation-delay:-3s;">
@@ -52,6 +47,7 @@
     <img class="vat" src="diver1.png"         alt="Thợ lặn 1"    style="--w:299px; top:16%; animation-duration:30s; animation-delay:-15s;">
     <img class="vat" src="diver2.png"         alt="Thợ lặn 2"    style="--w:299px; top:62%; animation-duration:28s; animation-delay:-16s;">
     <img class="vat" src="diver3.png"         alt="Thợ lặn 3"    style="--w:299px; top:62%; animation-duration:28s; animation-delay:-20s;">
+  </div>
 
-  </body>
+</body>
 </html>
